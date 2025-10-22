@@ -134,18 +134,30 @@ function WeatherPage() {
       <div className="text-sky">
       <h1 className='text-white text-5xl font-bold text-center'>How&apos;s the sky looking today?</h1>
       </div>
-    <div className="search flex justify-center align-center gap-5">
-      <input
-        type="text"
-        placeholder="Search for a place..."
-        className="p-4 rounded-lg bg-[#312f4b] w-110 outline-0"
-      />
-      <button className='bg-[#4455da] rounded-lg w-28'>
-        Search 
-      </button>
-      
-    
-    </div>
+      <div className="flex justify-center items-center gap-4 mt-5">
+  <div className="relative w-[350px]">
+ 
+    <Image
+      src="/assets/images/icon-search.svg"
+      alt="Search Icon"
+      width={20}
+      height={20}
+      className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+    />
+
+    <input
+      type="text"
+      placeholder="Search for a place..."
+      className="w-full pl-12 pr-4 py-3 bg-[#312f4b] text-white rounded-lg outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-[#4455da] transition"
+    />
+  </div>
+
+
+  <button className="bg-[#4455da] hover:bg-[#5b6bff] transition text-white font-medium rounded-lg px-6 py-3">
+    Search
+  </button>
+</div>
+
     
     
     </div>
@@ -219,8 +231,8 @@ function WeatherPage() {
             </div>
           </div>
         </div>
-        <div className="right-card bg-[#312f4b] p-4 rounded-xl">
-          <div className="details-card flex flex-row gap-2 justify-center align-center">
+        <div className="right-card bg-[#312f4b] p-2 rounded-xl w-96">
+          <div className="details-card flex flex-row gap-2 justify-center align-center mt-4 mb-2">
             <div className="hourly flex  justify-center align-center mt-2">
           <p className='text-white text-xl font-bold mb-4'>Hourly Forecast</p>
           </div>
@@ -237,7 +249,7 @@ function WeatherPage() {
           </div>
           
           </div>
-          <div className="cards-hourly">
+          <div className="cards-hourly  pr-4">
             {hourlyOptions.map((option) => (
               <div key={option.index} className="hourly-card flex flex-row  justify-between align-center bg-[#3d3b5e] rounded-lg p-4 m-2 w-full h-[66px]">
                 <div className="image-time flex flex-row  gap-2 justify-between align-center">
