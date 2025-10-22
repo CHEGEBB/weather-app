@@ -42,7 +42,7 @@ function UnitsSelector() {
         {showMenu && (
             <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-44">
               <div className="switch-button">
-                <button className='border border-amber-50 p-2 text-left rounded-xl w-full'>
+                <button className='border border-amber-50 p-2 text-left rounded-lg w-full'>
                     Switch to Imperial
                 </button>
               </div>
@@ -70,7 +70,7 @@ function UnitsSelector() {
                 
                 {/* Fahrenheit button */}
                 <div 
-                    className={`farenheit p-2 text-left rounded-xl flex justify-between items-center cursor-pointer ${
+                    className={`farenheit p-2 text-left rounded-lg flex justify-between items-center cursor-pointer ${
                         activeTemp === 'fahrenheit' ? 'bg-[#312f4b]' : ''
                     }`}
                     onClick={() => setActiveTemp('fahrenheit')}
@@ -92,7 +92,7 @@ function UnitsSelector() {
                 
                 {/* km/h button */}
                 <div 
-                    className={`kmph p-2 text-left rounded-xl flex justify-between items-center cursor-pointer ${
+                    className={`kmph p-2 text-left rounded-lg flex justify-between items-center cursor-pointer ${
                         activeWind === 'kmph' ? 'bg-[#312f4b]' : ''
                     }`}
                     onClick={() => setActiveWind('kmph')}
@@ -110,7 +110,7 @@ function UnitsSelector() {
                 
                 {/* mph button */}
                 <div 
-                    className={`mph p-2 text-left rounded-xl flex justify-between items-center cursor-pointer ${
+                    className={`mph p-2 text-left rounded-lg flex justify-between items-center cursor-pointer ${
                         activeWind === 'mph' ? 'bg-[#312f4b]' : ''
                     }`}
                     onClick={() => setActiveWind('mph')}
@@ -132,7 +132,7 @@ function UnitsSelector() {
                 
                 {/* mm button */}
                 <div 
-                    className={`mm p-2 text-left rounded-xl flex justify-between items-center cursor-pointer ${
+                    className={`mm p-2 text-left rounded-lg flex justify-between items-center cursor-pointer ${
                         activePrecip === 'mm' ? 'bg-[#312f4b]' : ''
                     }`}
                     onClick={() => setActivePrecip('mm')}
@@ -150,7 +150,7 @@ function UnitsSelector() {
                 
                 {/* inches button */}
                 <div 
-                    className={`inches p-2 text-left rounded-xl flex justify-between items-center cursor-pointer ${
+                    className={`inches p-2 text-left rounded-lg flex justify-between items-center cursor-pointer ${
                         activePrecip === 'inches' ? 'bg-[#312f4b]' : ''
                     }`}
                     onClick={() => setActivePrecip('inches')}
