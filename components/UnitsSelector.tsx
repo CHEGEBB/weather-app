@@ -40,7 +40,7 @@ function UnitsSelector() {
         </div>
         
         {showMenu && (
-            <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-48">
+            <div className="menu absolute top-20 right-8 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-48">
               <div className="switch-button">
                 <button className='border border-amber-50 p-2 text-left rounded-lg w-full'>
                     Switch to Imperial
@@ -48,7 +48,7 @@ function UnitsSelector() {
               </div>
 
              <div className="temperature">
-                <p className='text-[#aeaeb7] ml-2 mb-2'>Temperature</p>
+                <p className='text-[#aeaeb7] ml-2 mb-2 text-[16px]'>Temperature</p>
                 
                 {/* Celsius button */}
                 <div 
@@ -88,7 +88,7 @@ function UnitsSelector() {
              </div>
 
              <div className="wind-speed">
-                <p className='text-[#aeaeb7] ml-2 mb-2'>Wind Speed</p>
+                <p className='text-[#aeaeb7] ml-2 mb-2 text-[16px]'>Wind Speed</p>
                 
                 {/* km/h button */}
                 <div 
@@ -128,7 +128,7 @@ function UnitsSelector() {
              </div>
 
              <div className="precipitation">
-                <p className='text-[#aeaeb7] ml-2 mb-2' >Precipitation</p>
+                <p className='text-[#aeaeb7] ml-2 mb-2 text-[16px]' >Precipitation</p>
                 
                 {/* mm button */}
                 <div 
