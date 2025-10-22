@@ -48,7 +48,7 @@ function UnitsSelector() {
               </div>
 
              <div className="temperature">
-                <p className='text-[#aeaeb7] ml-2'>Temperature</p>
+                <p className='text-[#aeaeb7] ml-2 mb-2'>Temperature</p>
                 
                 {/* Celsius button */}
                 <div 
@@ -88,7 +88,7 @@ function UnitsSelector() {
              </div>
 
              <div className="wind-speed">
-                <p className='text-[#aeaeb7] ml-2'>Wind Speed</p>
+                <p className='text-[#aeaeb7] ml-2 mb-2'>Wind Speed</p>
                 
                 {/* km/h button */}
                 <div 
@@ -128,7 +128,7 @@ function UnitsSelector() {
              </div>
 
              <div className="precipitation">
-                <p className='text-[#aeaeb7] ml-2' >Precipitation</p>
+                <p className='text-[#aeaeb7] ml-2 mb-2' >Precipitation</p>
                 
                 {/* mm button */}
                 <div 
