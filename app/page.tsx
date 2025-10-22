@@ -11,6 +11,58 @@ function WeatherPage() {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue(event.target.value);
   };
+
+  const options = [
+    {
+      index:1,
+      day:'Tue',
+      weather:'rain',
+      high:'20°',
+      low:'14°',
+      icon:'/assets/images/icon-rain.webp'
+    },
+    {
+      index:2,
+      day:'Wed',
+      weather:'drizzle',
+      high:'21°',
+      low:'15°',
+      icon:'/assets/images/icon-drizzle.webp'
+    },
+    {
+      index:3,
+      day:'Thu',
+      weather:'sunny',
+      high:'24°',
+      low:'14°',
+      icon:'/assets/images/icon-sunny.webp'
+    },
+    {
+      index:4,
+      day:'Fri',
+      weather:'partly-cloudy',
+      high:'25°',
+      low:'13°',
+      icon:'/assets/images/icon-partly-cloudy.webp'
+    },
+    {
+      index:5,
+      day:'Sat',
+      weather:'storm',
+      high:'25°',
+      low:'16°',
+      icon:'/assets/images/icon-storm.webp'
+    },
+    {
+      index:6,
+      day:'Sun',
+      weather:'snowy',
+      high:'24°',
+      low:'15°',
+      icon:'/assets/images/icon-snow.webp'
+    }
+
+  ]
   return (
     <div className='bg-[#03012d] align-center flex flex-column justify-center min-h-screen'>
     <div className="main-content">
@@ -96,7 +148,23 @@ function WeatherPage() {
             </div>
           </div>
 
-          <div className="forecast-cards"></div>
+          <div className="forecast-cards">
+            <p className='text-white text-2xl font-bold mt-8 mb-4'>Daily Forecast</p>
+            <div className="cards-forecast flex flex-row">
+              {options.map((option) => (
+                <div key={option.index} className="forecast-card flex flex-col justify-center align-center bg-[#312f4b] rounded-lg p-4 m-2 w-24 h-40">
+                  <p className='text-white text-lg font-bold'>{option.day}</p>
+                  <Image
+                    src={option.icon}
+                    alt={`${option.weather} icon`}
+                    width={50}
+                    height={50}
+                  />
+                  <p className='text-white text-md mt-2'>{option.high} / {option.low}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <div className="right-card">
           <div className="details-card">
