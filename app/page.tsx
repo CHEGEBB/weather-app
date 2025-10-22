@@ -167,8 +167,8 @@ function WeatherPage() {
                 bg-[url('/assets/images/bg-today-small.svg')] 
                 md:bg-[url('/assets/images/bg-today-large.svg')]">
           <div className="current-data flex flex-col justify-center align-center p-8 text-white">
-            <h1 className='text-4xl font-bold'>Berlin, Germany</h1>
-            <p className='text-2xl mt-2'>Tuesday, Aug 5, 2025</p>
+            <p className='text-4xl font-bold'>Berlin, Germany</p>
+            <p className='text-xl mt-2'>Tuesday, Aug 5, 2025</p>
             </div>
           <div className="temperature-data  flex flex-row justify-center align-center  p-8 text-white">
             <div className="temp-flex flex flex-col justify-center align-center">
