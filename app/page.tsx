@@ -11,6 +11,56 @@ function WeatherPage() {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue(event.target.value);
   };
+  const hourlyOptions = [
+    {
+      index:1,
+      time:'3 PM',
+      temperature:'20°',
+      icon:'/assets/images/icon-overcast.webp'
+    },
+    {
+      index:2,
+      time:'4 PM',
+      temperature:'20°',
+      icon:'/assets/images/icon-overcast.webp'
+    },
+    {
+      index:3,
+      time:'5 PM',
+      temperature:'20°',
+      icon:'/assets/images/icon-overcast.webp'
+    },
+    {
+      index:4,
+      time:'6 PM',
+      temperature:'19°',
+      icon:'/assets/images/icon-overcast.webp'
+    },
+    {
+      index:5,
+      time:'7 PM',
+      temperature:'18°',
+      icon:'/assets/images/icon-overcast.webp'
+    },
+    {
+      index:6,
+      time:'8 PM',
+      temperature:'18°',
+      icon:'/assets/images/icon-partly-cloudy.webp'
+    },
+    {
+      index:7,
+      time:'9 PM',
+      temperature:'17°',
+      icon:'/assets/images/icon-overcast.webp'
+    },
+    {
+      index:8,
+      time:'10 PM',
+      temperature:'17°',
+      icon:'/assets/images/icon-overcast.webp'
+    }
+  ]
 
   const options = [
     {
@@ -117,7 +167,7 @@ function WeatherPage() {
               height={100}
               />
               </div>
-            <h2 className='text-4xl font-bold mt-4 flex flex-col justify-center align-center'>20°</h2>
+            <p className='text-8xl italic font-bold mt-4 flex flex-col justify-center align-center'>20°</p>
             </div>
     
 </div>
@@ -153,14 +203,17 @@ function WeatherPage() {
             <div className="cards-forecast flex flex-row">
               {options.map((option) => (
                 <div key={option.index} className="forecast-card flex flex-col justify-center align-center bg-[#312f4b] rounded-lg p-4 m-2 w-24 h-40">
-                  <p className='text-white text-lg font-bold'>{option.day}</p>
+                  <p className='text-white text-lg text-center font-bold'>{option.day}</p>
                   <Image
                     src={option.icon}
                     alt={`${option.weather} icon`}
                     width={50}
                     height={50}
                   />
-                  <p className='text-white text-md mt-2'>{option.high} / {option.low}</p>
+                  <div className="temps flex flex-row gap-6">
+                  <p className='text-white  text-md mt-2'>{option.high}</p>
+                  <p className='text-white text-md mt-2'>{option.low}</p>
+                  </div>
                 </div>
               ))}
             </div>
