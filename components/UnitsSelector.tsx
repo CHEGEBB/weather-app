@@ -17,7 +17,7 @@ function UnitsSelector() {
 
    return (
     <div className=''>
-        <div className="toggle-button flex flex-row p-2 border-2 border-[#aeaeb7] gap-2 rounded-[10px] cursor-pointer" onClick={handleToggleMenu}>
+        <div className="toggle-button flex flex-row p-2 border-2 border-[#aeaeb7] bg-[#272541] gap-2 rounded-[10px] cursor-pointer" onClick={handleToggleMenu}>
             <div className="gearcon align-center justify-center flex">
                 <Image
                 src="/assets/images/icon-units.svg"
@@ -40,7 +40,7 @@ function UnitsSelector() {
         </div>
         
         {showMenu && (
-            <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-44">
+            <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-48">
               <div className="switch-button">
                 <button className='border border-amber-50 p-2 text-left rounded-lg w-full'>
                     Switch to Imperial
@@ -48,7 +48,7 @@ function UnitsSelector() {
               </div>
 
              <div className="temperature">
-                <p>Temperature</p>
+                <p className='text-[#aeaeb7] ml-2'>Temperature</p>
                 
                 {/* Celsius button */}
                 <div 
@@ -88,7 +88,7 @@ function UnitsSelector() {
              </div>
 
              <div className="wind-speed">
-                <p>Wind Speed</p>
+                <p className='text-[#aeaeb7] ml-2'>Wind Speed</p>
                 
                 {/* km/h button */}
                 <div 
@@ -128,7 +128,7 @@ function UnitsSelector() {
              </div>
 
              <div className="precipitation">
-                <p>Precipitation</p>
+                <p className='text-[#aeaeb7] ml-2' >Precipitation</p>
                 
                 {/* mm button */}
                 <div 
