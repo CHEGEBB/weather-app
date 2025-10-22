@@ -47,9 +47,9 @@ function WeatherPage() {
     
     
     </div>
-    <div className="cards flex flex-row justify-center align-center min-w-screen">
+    <div className="cards flex flex-row justify-center align-center min-w-screen p-4 mt-12">
         <div className="left-cards">
-        <div className="place-card flex flex-row justify-center align-center  w-full max-w-[700px] h-[250px] bg-cover bg-center bg-no-repeat 
+        <div className="place-card flex flex-row justify-center align-center  w-full max-w-[700px] h-[250px] bg-cover bg-center bg-no-repeat rounded-xl
                 bg-[url('/assets/images/bg-today-small.svg')] 
                 md:bg-[url('/assets/images/bg-today-large.svg')]">
           <div className="current-data flex flex-col justify-center align-center p-8 text-white">
@@ -69,30 +69,30 @@ function WeatherPage() {
             </div>
     
 </div>
-          <div className="weather-cards flex flex-row gap-3 ">
-            <div className="feels card w-36 h-24 bg-red-400 rounded-lg">
-              <p>
+          <div className="weather-cards flex flex-row gap-3 mt-8">
+            <div className="feels card w-36 h-24 bg-[#312f4b] rounded-lg p-4">
+              <p className='text-[#aeaeb7] text-left'>
                 Feels Like
               </p>
-              <h2>18°</h2>
+              <p className='text-[#ffffff] text-left  text-2xl mt-2'>18°</p>
             </div>
-            <div className="humidity card card w-36 h-24 bg-red-400 rounded-lg">
-              <p>
+            <div className="humidity card card w-36 h-24 p-4 bg-[#312f4b] rounded-lg">
+              <p className='text-[#aeaeb7] text-left '>
                 Humidity
               </p>
-              <h2>46%</h2>
+              <p className='text-[#ffffff] text-left  text-2xl mt-2' >46%</p>
           </div>
-            <div className="wind card card w-36 h-24 bg-red-400 rounded-lg">
-              <p>
+            <div className="wind card card w-36 h-24 p-4 bg-[#312f4b] rounded-lg">
+              <p className='text-[#aeaeb7] text-left '>
                 Wind Speed
               </p>
-              <h2>14 km/h</h2>
+              <p className='text-[#ffffff] text-left  text-2xl mt-2'>14 km/h</p>
             </div>
-            <div className="precipitation-card card w-36 h-24 bg-red-400 rounded-lg">
-              <p>
+            <div className="precipitation-card card p-4 w-36 h-24 bg-[#312f4b] rounded-lg">
+              <p className='text-[#aeaeb7] text-left '>
                 Precipitation
               </p>
-              <h2>0 mm</h2>
+              <p className='text-[#ffffff] text-left  text-2xl mt-2'>0 mm</p>
             </div>
           </div>
 
