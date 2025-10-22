@@ -36,7 +36,7 @@ function UnitsSelector() {
             </div>
         </div>
         {showMenu && (
-            <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded shadow-lg">
+            <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-40">
               <div className="switch-button">
                 <button className='border border-amber-50'>
                     Switch to Imperial
