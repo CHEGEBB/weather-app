@@ -149,7 +149,7 @@ function WeatherPage() {
     
     
     </div>
-    <div className="cards flex flex-row justify-center align-center min-w-screen p-4 mt-12">
+    <div className="cards flex flex-row gap-6 justify-center align-center min-w-screen p-4 mt-12">
         <div className="left-cards">
         <div className="place-card flex flex-row justify-center align-center  w-full max-w-[700px] h-[250px] bg-cover bg-center bg-no-repeat rounded-xl
                 bg-[url('/assets/images/bg-today-small.svg')] 
@@ -219,9 +219,23 @@ function WeatherPage() {
             </div>
           </div>
         </div>
-        <div className="right-card">
+        <div className="right-card bg-[#312f4b]">
           <div className="details-card">
-            Weather Details
+            <div className="hourly">
+          <p className='text-white text-2xl font-bold mb-4'>Hourly Forecast</p>
+          </div>
+          <div className="pick-day">
+            <select>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>  
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+              <option value="Monday">Monday</option>
+            </select>
+          </div>
+          
           </div>
 
         </div>
