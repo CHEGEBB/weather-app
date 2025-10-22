@@ -1,9 +1,9 @@
 .cards{
     .left-cards{
         .place-card{
-            background-image: url('../public/assets/images/bg-today-small.svg');
+            background-image: url('../public/assets/images/bg-today-large.svg');
             background-repeat: no-repeat;
-            background-size: fit;
+            background-size: cover;
             background-position: center;
         }
     }

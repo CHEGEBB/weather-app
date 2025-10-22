@@ -3,7 +3,6 @@ import UnitsSelector from '@/components/UnitsSelector';
 import Image from 'next/image';
 import React from 'react';
 import { useState } from 'react';
-import '@/sass/weather.scss';
 
 
 function WeatherPage() {
@@ -50,10 +49,26 @@ function WeatherPage() {
     </div>
     <div className="cards flex flex-row justify-center align-center min-w-screen">
         <div className="left-cards">
-          <div className="place-card w-[700px] h-[300px]">
-            Berlin, Germany
-
-          </div>
+        <div className="place-card flex flex-row justify-center align-center  w-full max-w-[700px] h-[250px] bg-cover bg-center bg-no-repeat 
+                bg-[url('/assets/images/bg-today-small.svg')] 
+                md:bg-[url('/assets/images/bg-today-large.svg')]">
+          <div className="current-data flex flex-col justify-center align-center p-8 text-white">
+            <h1 className='text-4xl font-bold'>Berlin, Germany</h1>
+            <p className='text-2xl mt-2'>Tuesday, Aug 5, 2025</p>
+            </div>
+          <div className="temperature-data  flex flex-row justify-center align-center  p-8 text-white">
+            <div className="temp-flex flex flex-col justify-center align-center">
+            <Image
+              src="/assets/images/icon-sunny.webp"
+              alt="Cloudy Icon"
+              width={100}
+              height={100}
+              />
+              </div>
+            <h2 className='text-4xl font-bold mt-4 flex flex-col justify-center align-center'>20°</h2>
+            </div>
+    
+</div>
           <div className="weather-cards flex flex-row gap-3 ">
             <div className="feels card w-36 h-24 bg-red-400 rounded-lg">
               <p>
