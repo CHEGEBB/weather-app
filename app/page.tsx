@@ -22,13 +22,13 @@ function WeatherPage() {
       index:2,
       time:'4 PM',
       temperature:'20°',
-      icon:'/assets/images/icon-overcast.webp'
+      icon:'/assets/images/icon-partly-cloudy.webp'
     },
     {
       index:3,
       time:'5 PM',
       temperature:'20°',
-      icon:'/assets/images/icon-overcast.webp'
+      icon:'/assets/images/icon-sunny.webp'
     },
     {
       index:4,
@@ -40,19 +40,19 @@ function WeatherPage() {
       index:5,
       time:'7 PM',
       temperature:'18°',
-      icon:'/assets/images/icon-overcast.webp'
+      icon:'/assets/images/icon-snow.webp'
     },
     {
       index:6,
       time:'8 PM',
       temperature:'18°',
-      icon:'/assets/images/icon-partly-cloudy.webp'
+      icon:'/assets/images/icon-fog.webp'
     },
     {
       index:7,
       time:'9 PM',
       temperature:'17°',
-      icon:'/assets/images/icon-overcast.webp'
+      icon:'/assets/images/icon-snow.webp'
     },
     {
       index:8,
@@ -171,7 +171,7 @@ function WeatherPage() {
             </div>
     
 </div>
-          <div className="weather-cards flex flex-row gap-3 mt-8">
+          <div className="weather-cards flex flex-row gap-3 mt-14">
             <div className="feels card w-36 h-24 bg-[#312f4b] rounded-lg p-4">
               <p className='text-[#aeaeb7] text-left'>
                 Feels Like
@@ -199,7 +199,7 @@ function WeatherPage() {
           </div>
 
           <div className="forecast-cards">
-            <p className='text-white text-2xl font-bold mt-8 mb-4'>Daily Forecast</p>
+            <p className='text-white text-2xl font-bold mt-14 mb-4'>Daily Forecast</p>
             <div className="cards-forecast flex flex-row">
               {options.map((option) => (
                 <div key={option.index} className="forecast-card flex flex-col justify-center align-center bg-[#312f4b] rounded-lg p-4 m-2 w-24 h-40">
@@ -219,13 +219,13 @@ function WeatherPage() {
             </div>
           </div>
         </div>
-        <div className="right-card bg-[#312f4b]">
-          <div className="details-card">
-            <div className="hourly">
-          <p className='text-white text-2xl font-bold mb-4'>Hourly Forecast</p>
+        <div className="right-card bg-[#312f4b] p-4 rounded-xl">
+          <div className="details-card flex flex-row gap-2 justify-center align-center">
+            <div className="hourly flex  justify-center align-center mt-2">
+          <p className='text-white text-xl font-bold mb-4'>Hourly Forecast</p>
           </div>
           <div className="pick-day">
-            <select>
+            <select className='bg-[#3d3b5e] w-24 h-12 rounded-lg'>
               <option value="Tuesday">Tuesday</option>
               <option value="Wednesday">Wednesday</option>
               <option value="Thursday">Thursday</option>
@@ -236,6 +236,22 @@ function WeatherPage() {
             </select>
           </div>
           
+          </div>
+          <div className="cards-hourly">
+            {hourlyOptions.map((option) => (
+              <div key={option.index} className="hourly-card flex flex-row  justify-between align-center bg-[#3d3b5e] rounded-lg p-4 m-2 w-full h-[66px]">
+                <div className="image-time flex flex-row  gap-2 justify-between align-center">
+                <Image
+                  src={option.icon}
+                  alt="Weather Icon"
+                  width={30}
+                  height={30}
+                />
+                <p className='text-white text-lg text-center font-bold mt-[4px]'>{option.time}</p>
+                </div>
+                <p className='text-white  text-md mt-2'>{option.temperature}</p>
+              </div>
+            ))}
           </div>
 
         </div>
