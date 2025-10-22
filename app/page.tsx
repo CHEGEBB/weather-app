@@ -221,6 +221,7 @@ function WeatherPage() {
                     alt={`${option.weather} icon`}
                     width={50}
                     height={50}
+                    className='flex justify-center align-center mt-2 ml-[10px]'
                   />
                   <div className="temps flex flex-row gap-6">
                   <p className='text-white  text-md mt-2'>{option.high}</p>
