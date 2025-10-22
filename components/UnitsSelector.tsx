@@ -36,9 +36,9 @@ function UnitsSelector() {
             </div>
         </div>
         {showMenu && (
-            <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-40">
+            <div className="menu absolute top-20 right-10 mt-2 bg-[#272541] rounded-lg shadow-lg p-2 w-44">
               <div className="switch-button">
-                <button className='border border-amber-50'>
+                <button className='border border-amber-50 p-2 text-left rounded-xl'>
                     Switch to Imperial
                 </button>
               </div>
@@ -47,7 +47,7 @@ function UnitsSelector() {
                     Temperature
                 </p>
                 <div className="celcius">
-                <button>
+                <button className='bg-[#312f4b] p-2 text-left rounded-xl'>
                     Celcius(°C)
                 </button>
                 </div>
